@@ -1,0 +1,25 @@
+
+.gemini-wallpaper-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -999; /* Place behind all other modules */
+    background-color: #000;
+    pointer-events: none; /* Let clicks pass through */
+}
+
+.gemini-wallpaper-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* transition for smooth updates is handled by MM's updateDom speed, but we add CSS fade just in case */
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
